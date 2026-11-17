@@ -1,0 +1,50 @@
+{
+  "name": "@apps-patrol/node",
+  "version": "0.2.0",
+  "description": "Send usage events from your Shopify app to Apps Patrol",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/build.mjs && node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "shopify",
+    "analytics",
+    "apps-patrol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahdiKetata99/apps-patrol-node.git"
+  },
+  "homepage": "https://github.com/MahdiKetata99/apps-patrol-node#readme",
+  "bugs": {
+    "url": "https://github.com/MahdiKetata99/apps-patrol-node/issues"
+  }
+}
